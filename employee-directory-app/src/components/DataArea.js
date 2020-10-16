@@ -32,13 +32,13 @@ const DataArea = () => {
 
     const compareFnc = (a, b) => {
       if (currentOrder === "ascend") {
-        // account for missing values
+       
         if (a[heading] === undefined) {
           return 1;
         } else if (b[heading] === undefined) {
           return -1;
         }
-        // numerically
+        
         else if (heading === "name") {
           return a[heading].first.localeCompare(b[heading].first);
         } else if (heading === "dob") {
@@ -47,13 +47,13 @@ const DataArea = () => {
           return a[heading].localeCompare(b[heading]);
         }
       } else {
-        // account for missing values
+       
         if (a[heading] === undefined) {
           return 1;
         } else if (b[heading] === undefined) {
           return -1;
         }
-        // numerically
+        
         else if (heading === "name") {
           return b[heading].first.localeCompare(a[heading].first);
         }else if (heading === "dob") {
@@ -89,7 +89,7 @@ const DataArea = () => {
     setDeveloperState({ ...developerState, filteredUsers: filteredList });
   };
 
-  ///https://stackoverflow.com/questions/53120972/how-to-call-loading-function-with-react-useeffect-only-once
+  
   useEffect(() => {
     API.getEmployee().then(results => {
       console.log(results.data.results);
