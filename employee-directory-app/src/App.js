@@ -1,18 +1,22 @@
 import React from 'react';
 import Header from "./components/Header";
-import Wrapper from "./components/Wrapper";
+import EmployeeContainer from './components/EmployeeContainer';
 import Search from "./components/Search";
-import './App.css';
+import Wrapper from "./components/Wrapper";
+import "./App.css";
+
+
 
 function App() {
   return (
-    <div className="App">
+    <div className= "App">
       <Wrapper>
         <Header />
         <Search />
+        <EmployeeContainer />
       </Wrapper>
     </div>
-  );
+  )
 }
 
 export default App;
